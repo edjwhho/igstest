@@ -40,8 +40,8 @@ igstest
 └── values.yaml
 10 directories, 21 files
 
-4. I have uploaded all these file in repo:  https://github.com/edjwhho/igstest
-5. To run, just clone the repo ie. git clone https://github.com/edjwhho/igstest
+4. I have uploaded all these file in repo:  https://github.com/edjwhho/igstest.git
+5. To run, just clone the repo ie. git clone https://github.com/edjwhho/igstest.git
 6. cd igstest
 7. All the charts for frontend / service1 / service2 /service3 are located in igstest/charts
 8. To run the charts just run this command:  helm install igstest .
