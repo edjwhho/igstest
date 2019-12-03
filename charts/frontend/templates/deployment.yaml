@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: frontend
+  name: frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: frontend
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: frontend
+    spec:
+      containers:
+      - image: gregigs/igs-frontend:latest
+        name: igs-frontend
+        env:
+        - name: ASPNETCORE_Service1
+          value: http://ec2-18-209-161-12.compute-1.amazonaws.com/api/service1 
+        - name: ASPNETCORE_Service2
+          value: http://ec2-18-209-161-12.compute-1.amazonaws.com/api/service2 
+        - name: ASPNETCORE_Service3
+          value: http://ec2-18-209-161-12.compute-1.amazonaws.com/api/service2 
+        resources: {}
+status: {}

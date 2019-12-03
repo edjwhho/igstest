@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: service3
+  name: service3
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: service3
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: service3
+    spec:
+      containers:
+      - image: gregigs/igs-service3:latest
+        name: igs-service3
+        resources: {}
+status: {}
